@@ -10,6 +10,6 @@ class games extends Model
     protected $table = 'games';
     public function gameCategorey()
     {
-        return $this->belongsTo(gamesCategorey::class);
+        return $this->belongsTo(gamesCategorey::class, 'games_categorey_id');
     }
 }

@@ -276,6 +276,11 @@ class homeController extends Controller
     {
         $categories = $this->gameCategoreyRepository->getAllCategories();
         $games = $this->gameRepository->allGames();
+        foreach ($games as $game) {
+            $game->cover_photo_url = $game->cover_photo && Storage::disk('public')->exists($game->cover_photo)
+                ? asset('storage/' . $game->cover_image)
+                : asset('images/placeholdergame.jpg');
+        }
         return view('home.games.index', compact('categories', 'games'));
     }
 

@@ -54,6 +54,7 @@ Route::group([], function () {
     Route::post('/student/quizzes/{quiz}/exit', [homeController::class, 'exitQuiz'])->name('student.quiz.exit')->middleware('auth');
     Route::get('/student/quizzes/{quiz}/result', [homeController::class, 'quizResult'])->name('student.quiz.result')->middleware('auth');
     Route::get('/games', [homeController::class, 'getGames'])->name('categorey.game');
+    Route::get('/game/{slug}', [homeController::class, 'showGame'])->name('game.show');
 });
 
 Route::group([

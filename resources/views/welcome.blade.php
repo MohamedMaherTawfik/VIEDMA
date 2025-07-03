@@ -33,8 +33,11 @@
         <div
             class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-white text-center px-6">
             <h1 class="text-3xl md:text-4xl font-bold mb-4"> {{ __('messages.WelcomeMessage') }} <span
-                    class="text-[#176b98]">{{ __('messages.title') }}
-                </span></h1>
+                    class="text-[#176b98]"><span class="font-bold text-5xl text-[#176b98]">V<span
+                            class="text-5xl text-gray-700">I</span><span class="text-5xl text-[#F04A22]">E</span><span
+                            class="text-5xl text-[#FEBE35]">D</span><span class="text-5xl text-[#176b98]">M</span><span
+                            class="text-5xl text-[#75C151]">A</span>
+                    </span></h1>
             <p class="text-lg md:text-xl mb-6">{{ __('messages.welcomeDescription') }}</p>
 
             <!-- Search Container with Dropdown -->
@@ -369,72 +372,68 @@
             updateView();
         });
     </script>
-
     {{-- end courses --}}
 
     <!-- Why Choose Us Section -->
-
-    <section class="bg-gray-100 py-12 text-center" x-data="{ show: false }" x-init="setTimeout(() => show = true, 300)">
-        <!-- Full Content -->
-        <div class="transition-all duration-700 ease-out transform"
-            :class="show ? 'translate-x-0 opacity-100' : '-translate-x-20 opacity-0'">
+    <section class="bg-white py-16 px-4 sm:px-6 lg:px-8" x-data="{ show: false }" x-init="setTimeout(() => show = true, 300)">
+        <div class="max-w-7xl mx-auto transition-all duration-700 ease-out transform"
+            :class="show ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'">
 
             <!-- Title -->
-            <h2 class="text-2xl font-bold text-teal-700 mb-6 transition-opacity duration-700 delay-200"
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-teal-600 text-center mb-6 transition-opacity duration-700 delay-200"
                 :class="show ? 'opacity-100' : 'opacity-0'">
                 {{ __('messages.why us') }}
             </h2>
 
             <!-- Paragraph -->
-            <p class="max-w-3xl mx-auto text-gray-700 mb-6 transition-all duration-700 delay-300 transform"
-                :class="show ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'">
+            <p class="max-w-2xl mx-auto text-gray-600 text-lg text-center mb-10 transition-all duration-700 delay-300 transform"
+                :class="show ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'">
                 {{ __('messages.why Descrption') }}
             </p>
 
-            <!-- List -->
-            <ul class="text-gray-700 text-left max-w-4xl mx-auto space-y-2 mb-10">
+            <!-- Features List -->
+            <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto mb-12">
                 <template
                     x-for="(item, index) in [
-            '{{ __('messages.line 1') }}',
-            '{{ __('messages.line 2') }}',
-            '{{ __('messages.line 3') }}',
-            '{{ __('messages.line 4') }}',
-            '{{ __('messages.line 5') }}'
-        ]"
+                '{{ __('messages.line 1') }}',
+                '{{ __('messages.line 2') }}',
+                '{{ __('messages.line 3') }}',
+                '{{ __('messages.line 4') }}',
+                '{{ __('messages.line 5') }}',
+                '{{ __('messages.line 6') }}'
+            ]"
                     :key="index">
-                    <li class="transition-all duration-500 ease-out transform"
+                    <li class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl shadow-sm border transition-all duration-500 ease-out transform"
                         :style="`transition-delay: ${400 + index * 100}ms`"
-                        :class="show ? 'translate-x-0 opacity-100' : '-translate-x-5 opacity-0'">
-                        <span class="text-green-600 font-bold">✔</span>
-                        <span x-text="item"></span>
+                        :class="show ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'">
+                        <span class="text-green-500 text-xl mt-1">✔</span>
+                        <span class="text-gray-700" x-text="item"></span>
                     </li>
                 </template>
             </ul>
 
-            <!-- Cards -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <!-- Statistic Cards -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                 <template
                     x-for="(card, idx) in [
-            { img: 'https://cdn-icons-png.flaticon.com/128/3449/3449519.png', title: '300,000+ {{ __('messages.student') }}' },
-            { img: 'https://cdn-icons-png.flaticon.com/128/3048/3048702.png', title: '200,000+ {{ __('messages.grauates') }}' },
-            { img: 'https://cdn-icons-png.flaticon.com/128/4211/4211708.png', title: '100,000+ {{ __('messages.teacher') }}' }
-        ]"
+                { img: 'https://cdn-icons-png.flaticon.com/128/3135/3135755.png', title: '300,000+ {{ __('messages.student') }}' },
+                { img: 'https://cdn-icons-png.flaticon.com/128/4211/4211708.png', title: '200,000+ {{ __('messages.grauates') }}' },
+                { img: 'https://cdn-icons-png.flaticon.com/128/4140/4140048.png', title: '100,000+ {{ __('messages.teacher') }}' },
+            ]"
                     :key="idx">
-                    <div class="text-center transition-all duration-700 ease-out transform"
+                    <div class="bg-gray-50 p-6 rounded-xl text-center shadow-md transition-all duration-700 ease-out transform"
                         :style="`transition-delay: ${1000 + idx * 200}ms`"
-                        :class="show ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'">
-                        <img :src="card.img" class="mx-auto h-20" alt="">
-                        <p class="text-xl font-bold mt-2" x-text="card.title"></p>
+                        :class="show ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'">
+                        <img :src="card.img" class="mx-auto h-20 mb-4" alt="">
+                        <p class="text-lg font-semibold text-gray-800" x-text="card.title"></p>
                     </div>
                 </template>
             </div>
         </div>
     </section>
-
     {{-- End why choose us --}}
 
     <!-- Categories Section -->
-
     <section class="py-16 px-4 bg-white" x-data="{ show: false }" x-init="setTimeout(() => show = true, 300)">
         <div class="container mx-auto max-w-6xl">
 
@@ -474,11 +473,9 @@
 
         </div>
     </section>
-
     {{-- End Categorey Section --}}
 
     <!-- FAQ Section -->
-
     <section class="py-16 px-4 bg-gray-50" x-data>
         <div class="container mx-auto max-w-4xl">
             <!-- Section Header -->
@@ -572,7 +569,6 @@
             }
         </style>
     </section>
-
     {{-- End FAQ --}}
 
     <!-- Footer -->
