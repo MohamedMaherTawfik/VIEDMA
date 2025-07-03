@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oxford Platform</title>
+    <title>VIEDMA</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     {{-- font awseome --}}
@@ -29,11 +29,11 @@
 
     <!-- Hero Section with Search Dropdown -->
     <div class="relative bg-cover bg-center h-[500px]"
-        style="background-image: url('https://images.unsplash.com/photo-1577896851231-70ef18881754?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');">
+        style="background-image: url('https://images.unsplash.com/photo-1509062522246-3755977927d7?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2xhc3Nyb29tfGVufDB8fDB8fHww');">
         <div
             class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-white text-center px-6">
             <h1 class="text-3xl md:text-4xl font-bold mb-4"> {{ __('messages.WelcomeMessage') }} <span
-                    class="text-[#79131d]">{{ __('messages.title') }}
+                    class="text-[#176b98]">{{ __('messages.title') }}
                 </span></h1>
             <p class="text-lg md:text-xl mb-6">{{ __('messages.welcomeDescription') }}</p>
 
@@ -44,7 +44,7 @@
                         @focus="showDropdown = true" @click.away="showDropdown = false"
                         placeholder="{{ __('messages.searchInside') }}"
                         class="flex-grow px-4 py-2 rounded-l-md text-black" />
-                    <button @click="searchCourses()" class="bg-[#79131d] text-[#e4ce96] px-4 py-2 rounded-r-md">
+                    <button @click="searchCourses()" class="bg-[#176b98] text-[#e4ce96] px-4 py-2 rounded-r-md">
                         {{ __('messages.search') }}
                     </button>
                 </div>
@@ -75,7 +75,7 @@
                 <div x-show="isLoading" class="absolute z-10 w-full mt-1 bg-white rounded-md shadow-lg p-4"
                     style="display: none;">
                     <div class="flex items-center text-gray-600">
-                        <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-[#79131d]" xmlns="http://www.w3.org/2000/svg"
+                        <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-[#176b98]" xmlns="http://www.w3.org/2000/svg"
                             fill="none" viewBox="0 0 24 24">
                             <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor"
                                 stroke-width="4"></circle>
@@ -96,7 +96,7 @@
 
             <a href="#courses"
                 @click.prevent="document.querySelector('#courses').scrollIntoView({ behavior: 'smooth' })"
-                class="mt-4 bg-[#79131DC2] hover:bg-[#79131d] px-5 py-2 rounded-md text-[#e4ce96]">
+                class="mt-4 bg-[#176b98C2] hover:bg-[#176b98] px-5 py-2 rounded-md text-[#e4ce96]">
                 {{ __('messages.Browse') }}
             </a>
         </div>
@@ -106,14 +106,14 @@
     <section class="py-16 px-4 bg-gray-50">
         <div class="container mx-auto max-w-6xl">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-[#79131d] mb-4">{{ __('messages.about title') }}</h2>
+                <h2 class="text-3xl font-bold text-[#176b98] mb-4">{{ __('messages.about title') }}</h2>
                 <p class="text-lg text-gray-600 max-w-3xl mx-auto">{{ __('messages.empowering') }}</p>
             </div>
 
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div>
-                    <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
-                        alt="Students learning" class="rounded-lg shadow-xl w-full h-auto">
+                    <img src="https://wallpapercave.com/wp/wp4064825.jpg" alt="Students learning"
+                        class="rounded-lg shadow-xl w-full h-auto" style="height: 120%">
                 </div>
                 <div>
                     <h3 class="text-2xl font-semibold text-gray-800 mb-4">{{ __('messages.story title') }}</h3>
@@ -123,14 +123,14 @@
 
                     <div class="grid grid-cols-2 gap-4 mb-8">
                         <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-100">
-                            <div class="text-[#79131d] text-2xl mb-2">
+                            <div class="text-[#176b98] text-2xl mb-2">
                                 <i class="fas fa-graduation-cap"></i>
                             </div>
                             <h4 class="font-bold text-gray-800">500K+ Students</h4>
                             <p class="text-sm text-gray-600">{{ __('messages.first Square') }}</p>
                         </div>
                         <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-100">
-                            <div class="text-[#79131d] text-2xl mb-2">
+                            <div class="text-[#176b98] text-2xl mb-2">
                                 <i class="fas fa-chalkboard-teacher"></i>
                             </div>
                             <h4 class="font-bold text-gray-800">100K+ Teachers</h4>
@@ -139,7 +139,7 @@
                     </div>
 
                     <a href="{{ asset('pdf/oxforden.pdf') }}" target="_blank"
-                        class="px-5 py-3 bg-[#79131DE0] text-white rounded-md hover:bg-[#79131d] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors duration-200">
+                        class="px-5 py-3 bg-[#176b98E0] text-white rounded-md hover:bg-[#176b98] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors duration-200">
                         {{ __('messages.learn more') }}
                     </a>
                 </div>
@@ -184,7 +184,7 @@
 
                                     <!-- Level (Bottom Right) -->
                                     <div
-                                        class="absolute bottom-2 right-2 bg-[#79131d]/90 text-[#e4ce96] text-xs font-semibold px-2 py-1 rounded">
+                                        class="absolute bottom-2 right-2 bg-[#176b98]/90 text-[#e4ce96] text-xs font-semibold px-2 py-1 rounded">
                                         {{ ucfirst($course->level ?? 'Beginner') }}
                                     </div>
                                 </div>
@@ -192,7 +192,7 @@
                                     <div>
                                         <div class="flex items-center mb-2">
                                             <span
-                                                class="inline-block px-3 py-1 text-xs font-semibold text-[#e4ce96] bg-[#79131d] rounded-full">
+                                                class="inline-block px-3 py-1 text-xs font-semibold text-[#e4ce96] bg-[#176b98] rounded-full">
                                                 {{ $course->category->name ?? 'General' }}
                                             </span>
                                         </div>
@@ -229,10 +229,10 @@
                                             </div>
                                         </div>
                                         <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
-                                            <span class="text-lg font-bold text-[#79131d]">{{ $course->price ?? 0 }}
+                                            <span class="text-lg font-bold text-[#176b98]">{{ $course->price ?? 0 }}
                                                 SAR</span>
                                             <a href="{{ route('course.show', $course->slug) }}"
-                                                class="px-4 py-2 bg-[#79131DD2] text-[#e4ce96] text-sm font-medium rounded-md hover:bg-[#79131d] transition-colors duration-300">
+                                                class="px-4 py-2 bg-[#176b98D2] text-[#e4ce96] text-sm font-medium rounded-md hover:bg-[#176b98] transition-colors duration-300">
                                                 Subscribe Now
                                             </a>
                                         </div>
@@ -262,8 +262,8 @@
 
                     @for ($i = $start; $i <= $end; $i++)
                         <button data-page="{{ $i }}"
-                            class="w-10 h-10 flex items-center justify-center rounded-md text-sm font-semibold transition border border-[#79131d]
-                        {{ $i === 1 ? 'bg-[#79131d] text-white' : 'bg-transparent text-gray-700 hover:bg-[#79131d] hover:text-white' }}">
+                            class="w-10 h-10 flex items-center justify-center rounded-md text-sm font-semibold transition border border-[#176b98]
+                        {{ $i === 1 ? 'bg-[#176b98] text-white' : 'bg-transparent text-gray-700 hover:bg-[#176b98] hover:text-white' }}">
                             {{ $i }}
                         </button>
                     @endfor
@@ -332,10 +332,10 @@
                     const btn = document.createElement('button');
                     btn.dataset.page = i;
                     btn.textContent = i;
-                    btn.className = `w-10 h-10 flex items-center justify-center rounded-md text-sm font-semibold transition border border-[#79131d] ${
+                    btn.className = `w-10 h-10 flex items-center justify-center rounded-md text-sm font-semibold transition border border-[#176b98] ${
                     i === currentPage
-                        ? 'bg-[#79131d] text-white'
-                        : 'bg-transparent text-gray-700 hover:bg-[#79131d] hover:text-white'
+                        ? 'bg-[#176b98] text-white'
+                        : 'bg-transparent text-gray-700 hover:bg-[#176b98] hover:text-white'
                 }`;
                     btn.addEventListener('click', () => {
                         currentPage = i;
@@ -441,7 +441,7 @@
             <!-- العنوان -->
             <div class="text-center mb-12 transition-all duration-700 transform"
                 :class="show ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-6'">
-                <h2 class="text-3xl font-bold text-[#79131d] mb-4">{{ __('messages.Explore') }}</h2>
+                <h2 class="text-3xl font-bold text-[#176b98] mb-4">{{ __('messages.Explore') }}</h2>
                 <p class="text-lg text-gray-600 max-w-3xl mx-auto">
                     {{ __('messages.explore description') }}
                 </p>
@@ -486,7 +486,7 @@
                 x-transition:enter="transition ease-out duration-700"
                 x-transition:enter-start="opacity-0 translate-y-10"
                 x-transition:enter-end="opacity-100 translate-y-0">
-                <h2 class="text-3xl font-bold text-[#79131d] mb-4">{{ __('messages.FAQ') }}</h2>
+                <h2 class="text-3xl font-bold text-[#176b98] mb-4">{{ __('messages.FAQ') }}</h2>
                 <p class="text-lg text-gray-600">{{ __('messages.find answer') }}</p>
             </div>
 
@@ -500,21 +500,21 @@
                     x-transition:enter-end="opacity-100 translate-y-0">
                     <button @click="open = !open"
                         class="w-full px-6 py-4 text-left focus:outline-none group transition-colors duration-300"
-                        :class="open ? 'bg-[#79131d]' : 'bg-white'">
+                        :class="open ? 'bg-[#176b98]' : 'bg-white'">
                         <div class="flex items-center justify-between">
                             <h3 class="font-semibold text-lg transition-colors duration-300"
-                                :class="open ? 'text-[#e4ce96]' : 'text-gray-800 group-hover:text-[#79131d]'">
+                                :class="open ? 'text-[#e4ce96]' : 'text-gray-800 group-hover:text-[#176b98]'">
                                 {{ __('messages.how i enroll') }}
                             </h3>
                             <svg class="w-5 h-5 transition-all duration-300"
-                                :class="open ? 'text-[#e4ce96] rotate-180' : 'text-[#79131d]'" fill="none"
+                                :class="open ? 'text-[#e4ce96] rotate-180' : 'text-[#176b98]'" fill="none"
                                 stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M19 9l-7 7-7-7" />
                             </svg>
                         </div>
                     </button>
-                    <div x-show="open" x-collapse.duration.300ms class="px-6 pb-4 pt-0 bg-[#79131d] text-[#e4ce96]"
+                    <div x-show="open" x-collapse.duration.300ms class="px-6 pb-4 pt-0 bg-[#176b98] text-[#e4ce96]"
                         style="display: none;">
                         <p class="animate-fadeIn">{{ __('messages.how desrciption') }}</p>
                     </div>
@@ -528,21 +528,21 @@
                     x-transition:enter-end="opacity-100 translate-y-0">
                     <button @click="open = !open"
                         class="w-full px-6 py-4 text-left focus:outline-none group transition-colors duration-300"
-                        :class="open ? 'bg-[#79131d]' : 'bg-white'">
+                        :class="open ? 'bg-[#176b98]' : 'bg-white'">
                         <div class="flex items-center justify-between">
                             <h3 class="font-semibold text-lg transition-colors duration-300"
-                                :class="open ? 'text-[#e4ce96]' : 'text-gray-800 group-hover:text-[#79131d]'">
+                                :class="open ? 'text-[#e4ce96]' : 'text-gray-800 group-hover:text-[#176b98]'">
                                 {{ __('messages.Are Certificates') }}
                             </h3>
                             <svg class="w-5 h-5 transition-all duration-300"
-                                :class="open ? 'text-[#e4ce96] rotate-180' : 'text-[#79131d]'" fill="none"
+                                :class="open ? 'text-[#e4ce96] rotate-180' : 'text-[#176b98]'" fill="none"
                                 stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M19 9l-7 7-7-7" />
                             </svg>
                         </div>
                     </button>
-                    <div x-show="open" x-collapse.duration.300ms class="px-6 pb-4 pt-0 bg-[#79131d] text-[#e4ce96]"
+                    <div x-show="open" x-collapse.duration.300ms class="px-6 pb-4 pt-0 bg-[#176b98] text-[#e4ce96]"
                         style="display: none;">
                         <p class="animate-fadeIn">{{ __('messages.Are description') }}</p>
                     </div>

@@ -27,7 +27,7 @@
 
     <!-- Loading Spinner -->
     <div x-show="isLoading" class="flex justify-center items-center min-h-[300px]">
-        <svg class="animate-spin h-12 w-12 text-[#79131d]" xmlns="http://www.w3.org/2000/svg" fill="none"
+        <svg class="animate-spin h-12 w-12 text-[#75C151]" xmlns="http://www.w3.org/2000/svg" fill="none"
             viewBox="0 0 24 24">
             <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4">
             </circle>
@@ -49,7 +49,7 @@
                 <!-- Align button to the right -->
                 <div class="flex justify-end">
                     <a href="{{ route('myCourse', $course->slug) }}"
-                        class="bg-[#79131DDE] text-white px-4 py-2 rounded-xl hover:bg-[#79131d]">{{ __('messages.showCourse') }}</a>
+                        class="bg-[#176B98C7] text-[#FEBE35] px-4 py-2 rounded-xl hover:bg-[#176b98]">{{ __('messages.showCourse') }}</a>
                 </div>
             </div>
         @endforeach

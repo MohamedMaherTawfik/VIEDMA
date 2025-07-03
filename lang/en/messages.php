@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'title' => 'OxfordPlatform',
+    'title' => 'VIEDMA',
     'home' => 'Home',
     'MyCourses' => 'My Courses',
     'Courses' => 'Courses',
@@ -21,7 +21,7 @@ return [
     'searchInside' => 'Search courses...',
     'searchCourse' => 'Search',
     'Browse' => 'Browse Course',
-    'about title' => 'About Oxford paltform',
+    'about title' => 'About VIEDMA',
     'empowering' => 'Empowering learners WorldWide with quality education and innovative learning sloution',
     'story title' => 'Our Story',
     'story description' => "Founded in 2010, Oxford Platform has grown from a small local education provider to a leading international online learning platform. We've helped over 500,000 students achieve their educational goals through our innovative courses and dedicated instructors.",
@@ -170,4 +170,13 @@ return [
     'pricing' => 'Pricing',
     'instructor' => 'About the Instructor',
     'instructor_bio_placeholder' => 'Instructor bio would go here...',
+    'games' => 'Games',
+    'general' => 'General',
+    'no_reviews' => 'no Reviews',
+    'sar' => 'SAR',
+    'levels' => [
+        'beginner' => 'Beginner',
+        'intermediate' => 'Intermediate',
+        'advanced' => 'Advanced',
+    ],
 ];

@@ -8,6 +8,9 @@ use App\Interfaces\CategoryInterface;
 use App\Interfaces\CertificateInterface;
 use App\Interfaces\CommentInterface;
 use App\Interfaces\EnrollmentInterface;
+use App\Interfaces\GamesCategories;
+use App\Interfaces\GamesCategoriesInterface;
+use App\Interfaces\GamesInterface;
 use App\Interfaces\GraduationProjectInterface;
 use App\Interfaces\LessonInterface;
 use App\Interfaces\PaymentInterface;
@@ -20,6 +23,8 @@ use App\Repository\CategoreyRepository;
 use App\Repository\CertificateRepository;
 use App\Repository\CommentRepository;
 use App\Repository\EnrollmentRepository;
+use App\Repository\GamesCategoreyRepository;
+use App\Repository\GamesRepository;
 use App\Repository\GraduationProjectRepository;
 use App\Repository\LessonRepository;
 use App\Repository\PaymentRepository;
@@ -53,6 +58,8 @@ class AppServiceProvider extends ServiceProvider
         $this->app->bind(CategoryInterface::class, CategoreyRepository::class);
         $this->app->bind(ReviewsInterface::class, ReviewRepository::class);
         $this->app->bind(SubmissionsInterface::class, SubmissionsRepository::class);
+        $this->app->bind(GamesCategoriesInterface::class, GamesCategoreyRepository::class);
+        $this->app->bind(GamesInterface::class, GamesRepository::class);
     }
 
     /**

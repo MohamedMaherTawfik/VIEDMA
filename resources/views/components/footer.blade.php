@@ -1,42 +1,42 @@
-<footer class="bg-[#79131d] py-10 px-4 text-[#e4ce96]">
+<footer class="bg-[#176b98] py-10 px-4 text-[#FEBE35]">
     <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
 
         <!-- Quick Links -->
         <div>
-            <h4 class="font-bold border-b-2 border-[#e4ce96] inline-block mb-4">{{ __('messages.quick links') }}</h4>
+            <h4 class="font-bold border-b-2 border-[#FEBE35] inline-block mb-4">{{ __('messages.quick links') }}</h4>
             <ul class="space-y-2 text-gray-100">
-                <li><a href="#" class="hover:text-[#e4ce96]">{{ __('messages.home') }}</a></li>
-                <li><a href="#" class="hover:text-[#e4ce96]">{{ __('messages.Courses') }}</a></li>
-                <li><a href="#" class="hover:text-[#e4ce96]">{{ __('messages.certificates') }}</a></li>
-                <li><a href="#" class="hover:text-[#e4ce96]">{{ __('messages.services') }}</a></li>
-                <li><a href="#" class="hover:text-[#e4ce96]">{{ __('messages.specialists') }}</a></li>
+                <li><a href="#" class="hover:text-[#FEBE35]">{{ __('messages.home') }}</a></li>
+                <li><a href="#" class="hover:text-[#FEBE35]">{{ __('messages.Courses') }}</a></li>
+                <li><a href="#" class="hover:text-[#FEBE35]">{{ __('messages.certificates') }}</a></li>
+                <li><a href="#" class="hover:text-[#FEBE35]">{{ __('messages.services') }}</a></li>
+                <li><a href="#" class="hover:text-[#FEBE35]">{{ __('messages.specialists') }}</a></li>
             </ul>
         </div>
 
         <!-- Support & Contact -->
         <div>
-            <h4 class="font-bold border-b-2 border-[#e4ce96] inline-block mb-4">{{ __('messages.SupportContact') }}</h4>
+            <h4 class="font-bold border-b-2 border-[#FEBE35] inline-block mb-4">{{ __('messages.SupportContact') }}</h4>
             <ul class="space-y-2 text-gray-100">
-                <li><a href="#" class="hover:text-[#e4ce96]">{{ __('messages.who are we') }}</a></li>
-                <li><a href="#" class="hover:text-[#e4ce96]">{{ __('messages.contact') }}</a></li>
-                <li><a href="#" class="hover:text-[#e4ce96]">{{ __('messages.Copyrigth') }}</a></li>
-                <li><a href="#" class="hover:text-[#e4ce96]">{{ __('messages.Terms') }}</a></li>
-                <li><a href="#" class="hover:text-[#e4ce96]">{{ __('messages.privacy') }}</a></li>
-                <li><a href="#" class="hover:text-[#e4ce96]">{{ __('messages.help') }}</a></li>
+                <li><a href="#" class="hover:text-[#FEBE35]">{{ __('messages.who are we') }}</a></li>
+                <li><a href="#" class="hover:text-[#FEBE35]">{{ __('messages.contact') }}</a></li>
+                <li><a href="#" class="hover:text-[#FEBE35]">{{ __('messages.Copyrigth') }}</a></li>
+                <li><a href="#" class="hover:text-[#FEBE35]">{{ __('messages.Terms') }}</a></li>
+                <li><a href="#" class="hover:text-[#FEBE35]">{{ __('messages.privacy') }}</a></li>
+                <li><a href="#" class="hover:text-[#FEBE35]">{{ __('messages.help') }}</a></li>
             </ul>
         </div>
 
         <!-- Social & App Info -->
         <div class="text-center md:text-left">
             <div class="mb-4">
-                <img src="{{ asset('images/logo.png') }}" alt="Oxford Logo"
+                <img src="{{ asset('images/footer.png') }}" alt="Oxford Logo"
                     class="w-24 mx-auto md:mx-0 mb-2 rounded-full">
                 <p class="font-semibold text-gray-100">{{ __('messages.Follow us') }}</p>
-                <div class="flex justify-center md:justify-start gap-4 mt-2 text-[#e4ce96] text-xl">
-                    <a href="#"><i class="fab fa-facebook-square"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                <div class="flex justify-center md:justify-start gap-4 mt-2 text-xl">
+                    <a href="#"><i class="text-[#F04A22] fab fa-facebook-square"></i></a>
+                    <a href="#"><i class="text-[#FEBE35] fab fa-instagram"></i></a>
+                    <a href="#"><i class="text-[#F04A22] fab fa-youtube"></i></a>
+                    <a href="#"><i class="text-[#FEBE35] fab fa-linkedin"></i></a>
                 </div>
             </div>
 

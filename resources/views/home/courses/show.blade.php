@@ -94,7 +94,7 @@
                         <form action="{{ route('enrollment', $course->slug) }}" method="POST">
                             @csrf
                             <button type="submit"
-                                class="px-6 py-3 bg-[#79131DE0] hover:bg-[#79131d] text-white font-medium rounded-lg transition duration-200">
+                                class="px-6 py-3 bg-[#176B98C2] hover:bg-[#176b98] text-white font-medium rounded-lg transition duration-200">
                                 {{ __('messages.enroll_now') }}
                             </button>
                         </form>
@@ -149,7 +149,7 @@
                                     {{ __('messages.currency') }}</span>
                             </div>
                             <button
-                                class="w-full px-6 py-3 bg-[#79131DDC] hover:bg-[#79131d] text-white font-medium rounded-lg transition duration-200">
+                                class="w-full px-6 py-3 bg-[#176B98D7] hover:bg-[#176b98] text-white font-medium rounded-lg transition duration-200">
                                 {{ __('messages.enroll_course') }}
                             </button>
                         </div>

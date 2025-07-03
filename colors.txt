@@ -1,4 +1,6 @@
-grey:#f5f5f5
+grey700:#374151
 white:#ffffff
-DarkRed:#79131d
-WhiteGold:#e4ce96
+Dark Blue:#176b98
+yellow:#FEBE35
+Red:#F04A22
+Green:#75C151

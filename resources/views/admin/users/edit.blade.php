@@ -11,7 +11,7 @@
                     <input type="text" name="name" value="{{ $user->name }}"
                         class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500">
                     @error('name')
-                        <span class="text-red-500 text-sm">{{ $message }}</span>
+                        <span class="text-[#176b98] text-sm">{{ $message }}</span>
                     @enderror
                 </div>
 
@@ -21,7 +21,7 @@
                     <input type="email" name="email" value="{{ $user->email }}"
                         class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500">
                     @error('email')
-                        <span class="text-red-500 text-sm">{{ $message }}</span>
+                        <span class="text-[#176b98] text-sm">{{ $message }}</span>
                     @enderror
                 </div>
 
@@ -37,7 +37,7 @@
                         <option value="teacher">teacher</option>
                     </select>
                     @error('role')
-                        <span class="text-red-500 text-sm">{{ $message }}</span>
+                        <span class="text-[#176b98] text-sm">{{ $message }}</span>
                     @enderror
                 </div>
 

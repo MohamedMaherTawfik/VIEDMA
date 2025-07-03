@@ -25,11 +25,11 @@
                 <div class="flex flex-col sm:flex-row gap-4">
                     <!-- Search -->
                     <input type="text" x-model="search" placeholder="{{ __('messages.searchCourse') }}"
-                        class="block w-full sm:w-64 px-4 py-2 border border-gray-300 rounded-md text-sm focus:ring-[#79131d] focus:border-[#79131d]">
+                        class="block w-full sm:w-64 px-4 py-2 border border-gray-300 rounded-md text-sm focus:ring-[#176b98] focus:border-[#176b98]">
 
                     <!-- Filter by Level -->
                     <select x-model="filter"
-                        class="block w-full sm:w-auto px-4 py-2 border border-gray-300 rounded-md text-sm text-black focus:ring-[#79131d] focus:border-[#79131d]">
+                        class="block w-full sm:w-auto px-4 py-2 border border-gray-300 rounded-md text-sm text-black focus:ring-[#176b98] focus:border-[#176b98]">
                         <option value="">{{ __('messages.allLevels') }}</option>
                         <option value="Beginner">{{ __('messages.Beginner') }}</option>
                         <option value="Mid">{{ __('messages.mid') }}</option>
@@ -38,7 +38,7 @@
 
                     <!-- Sort by Price -->
                     <select x-model="sort"
-                        class="block w-full sm:w-auto px-4 py-2 border border-gray-300 rounded-md text-sm text-black focus:ring-[#79131d] focus:border-[#79131d]">
+                        class="block w-full sm:w-auto px-4 py-2 border border-gray-300 rounded-md text-sm text-black focus:ring-[#176b98] focus:border-[#176b98]">
                         <option value="">{{ __('messages.allPrices') }}</option>
                         <option value="0-100">0 - 100</option>
                         <option value="100-200">100 - 200</option>
@@ -69,12 +69,12 @@
                     @foreach ($courses as $course)
                         <template
                             x-if="(!filter || '{{ $course->level }}' === filter)
-                                && (!search || '{{ strtolower($course->title) }}'.includes(search.toLowerCase()))
-                                && (!sort
-                                    || (sort === '0-100' && {{ $course->price ?? 0 }} <= 100)
-                                    || (sort === '100-200' && {{ $course->price ?? 0 }} > 100 && {{ $course->price ?? 0 }} <= 200)
-                                    || (sort === '200-300' && {{ $course->price ?? 0 }} > 200 && {{ $course->price ?? 0 }} <= 300)
-                                    || (sort === '300+' && {{ $course->price ?? 0 }} > 300))"
+                    && (!search || '{{ strtolower($course->title) }}'.includes(search.toLowerCase()))
+                    && (!sort
+                        || (sort === '0-100' && {{ $course->price ?? 0 }} <= 100)
+                        || (sort === '100-200' && {{ $course->price ?? 0 }} > 100 && {{ $course->price ?? 0 }} <= 200)
+                        || (sort === '200-300' && {{ $course->price ?? 0 }} > 200 && {{ $course->price ?? 0 }} <= 300)
+                        || (sort === '300+' && {{ $course->price ?? 0 }} > 300))"
                             x-bind:key="{{ $course->id }}">
                             <div
                                 class="bg-white rounded-lg shadow-md transition hover:shadow-xl overflow-hidden flex flex-col">
@@ -87,15 +87,15 @@
                                     </div>
                                     <div
                                         class="absolute bottom-2 right-2 bg-[#000000B9] text-white text-xs px-2 py-1 rounded">
-                                        {{ ucfirst($course->level ?? 'Beginner') }}
+                                        {{ $course->level }}
                                     </div>
                                 </div>
 
                                 <div class="p-6 flex-1 flex flex-col justify-between">
                                     <div>
                                         <span
-                                            class="inline-block mb-2 px-3 py-1 text-xs font-semibold text-[#e4ce96] bg-[#79131d] rounded-full">
-                                            {{ $course->category->name ?? 'General' }}
+                                            class="inline-block mb-2 px-3 py-1 text-xs font-semibold text-[#FEBE35] bg-[#176b98] rounded-full">
+                                            {{ $course->category->name ?? __('messages.general') }}
                                         </span>
                                         <h3 class="text-xl font-semibold text-gray-900">{{ $course->title }}</h3>
                                         <p class="text-gray-600 text-sm mb-3 line-clamp-3">
@@ -107,28 +107,28 @@
                                                     d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v3.586a1 1 0 00.293.707l2 2a1 1 0 001.414-1.414L11 9.586V6z"
                                                     clip-rule="evenodd" />
                                             </svg>
-                                            {{ $course->duration ?? 0 }} hours
+                                            {{ $course->duration ?? 0 }} {{ __('messages.hours') }}
                                         </p>
                                     </div>
                                     <div
                                         class="mt-auto border-t pt-4 text-sm text-gray-700 flex justify-between items-center">
                                         <div>
-                                            <span class="font-bold">Instructor:</span>
+                                            <span class="font-bold">{{ __('messages.instructor') }}:</span>
                                             <span class="opacity-60">{{ $course->user->name }}</span>
                                         </div>
                                         <div class="flex items-center">
                                             <span class="text-yellow-400">★</span>
                                             <span class="ml-1 text-gray-600">{{ $course->rating ?? 0 }}
-                                                ({{ $course->reviews_count ?? 'no Reviews' }})
+                                                ({{ $course->reviews_count ?? __('messages.no_reviews') }})
                                             </span>
                                         </div>
                                     </div>
                                     <div class="pt-4 flex items-center justify-between">
-                                        <span class="text-lg font-bold text-[#79131d]">{{ $course->price ?? 0 }}
-                                            SAR</span>
+                                        <span class="text-lg font-bold text-[#176b98]">{{ $course->price ?? 0 }}
+                                            {{ __('messages.sar') }}</span>
                                         <a href="{{ route('course.show', $course->slug) }}"
-                                            class="px-4 py-2 bg-[#79131DD2] text-[#e4ce96] text-sm font-medium rounded-md hover:bg-[#79131d] transition">
-                                            Subscribe Now
+                                            class="px-4 py-2 bg-[#176b98D2] text-[#FEBE35] text-sm font-medium rounded-md hover:bg-[#176b98] transition">
+                                            {{ __('messages.subscribe') }}
                                         </a>
                                     </div>
                                 </div>
@@ -137,6 +137,7 @@
                     @endforeach
                 </div>
             </div>
+
         </div>
     </section>
 

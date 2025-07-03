@@ -31,7 +31,7 @@
 
                                     <!-- Level (Bottom Right) -->
                                     <div
-                                        class="absolute bottom-2 right-2 bg-[#79131d]/90 text-[#e4ce96] text-xs font-semibold px-2 py-1 rounded">
+                                        class="absolute bottom-2 right-2 bg-[#176b98]/90 text-[#FEBE35] text-xs font-semibold px-2 py-1 rounded">
                                         {{ ucfirst($course->level ?? 'Beginner') }}
                                     </div>
                                 </div>
@@ -39,7 +39,7 @@
                                     <div>
                                         <div class="flex items-center mb-2">
                                             <span
-                                                class="inline-block px-3 py-1 text-xs font-semibold text-[#e4ce96] bg-[#79131d] rounded-full">
+                                                class="inline-block px-3 py-1 text-xs font-semibold text-[#FEBE35] bg-[#176b98] rounded-full">
                                                 {{ $course->category->name ?? 'General' }}
                                             </span>
                                         </div>
@@ -70,10 +70,10 @@
                                             </div>
                                         </div>
                                         <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
-                                            <span class="text-lg font-bold text-[#79131d]">{{ $course->price ?? 0 }}
+                                            <span class="text-lg font-bold text-[#176b98]">{{ $course->price ?? 0 }}
                                                 SAR</span>
                                             <a href="{{ route('course.show', $course->slug) }}"
-                                                class="px-4 py-2 bg-[#79131DD2] text-[#e4ce96] text-sm font-medium rounded-md hover:bg-[#79131d] transition-colors duration-300">
+                                                class="px-4 py-2 bg-[#176b98D2] text-[#FEBE35] text-sm font-medium rounded-md hover:bg-[#176b98] transition-colors duration-300">
                                                 Subscribe Now
                                             </a>
                                         </div>
@@ -103,8 +103,8 @@
 
                     @for ($i = $start; $i <= $end; $i++)
                         <button data-page="{{ $i }}"
-                            class="w-10 h-10 flex items-center justify-center rounded-md text-sm font-semibold transition border border-[#79131d]
-                        {{ $i === 1 ? 'bg-[#79131d] text-white' : 'bg-transparent text-gray-700 hover:bg-[#79131d] hover:text-white' }}">
+                            class="w-10 h-10 flex items-center justify-center rounded-md text-sm font-semibold transition border border-[#176b98]
+                        {{ $i === 1 ? 'bg-[#176b98] text-white' : 'bg-transparent text-gray-700 hover:bg-[#176b98] hover:text-white' }}">
                             {{ $i }}
                         </button>
                     @endfor
@@ -173,10 +173,10 @@
                     const btn = document.createElement('button');
                     btn.dataset.page = i;
                     btn.textContent = i;
-                    btn.className = `w-10 h-10 flex items-center justify-center rounded-md text-sm font-semibold transition border border-[#79131d] ${
+                    btn.className = `w-10 h-10 flex items-center justify-center rounded-md text-sm font-semibold transition border border-[#176b98] ${
                     i === currentPage
-                        ? 'bg-[#79131d] text-white'
-                        : 'bg-transparent text-gray-700 hover:bg-[#79131d] hover:text-white'
+                        ? 'bg-[#176b98] text-white'
+                        : 'bg-transparent text-gray-700 hover:bg-[#176b98] hover:text-white'
                 }`;
                     btn.addEventListener('click', () => {
                         currentPage = i;

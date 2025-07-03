@@ -15,6 +15,10 @@ return new class extends Migration {
             $table->string('name');
             $table->string('photo')->nullable();
             $table->enum('role', ['teacher', 'user', 'admin'])->default('user');
+            $table->string('national_id')->nullable();
+            $table->string('nationallity')->nullable();
+            $table->string('parent_phone')->nullable();
+            $table->string('Academic_stage')->nullable();
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');

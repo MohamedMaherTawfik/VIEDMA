@@ -2,8 +2,11 @@
     <div class="container mx-auto px-4 py-3 flex items-center justify-between">
         <!-- Logo -->
         <div class="flex items-center gap-2">
-            <img src="{{ asset('images/logo.png') }}" alt="Logo" class="h-10 w-10">
-            <span class="font-bold text-lg text-[#79131d]">{{ __('messages.title') }}</span>
+            <img src="{{ asset('images/logo.png') }}" alt="Logo" class="h-10 w-5">
+            <span class="font-bold text-lg text-[#176b98]">V<span class="text-gray-700">I</span><span
+                    class="text-[#F04A22]">E</span><span class="text-[#FEBE35]">D</span><span
+                    class="text-[#176b98]">M</span><span class="text-[#75C151]">A</span>
+            </span>
         </div>
 
         <!-- Navigation Menu (Desktop) -->
@@ -15,6 +18,7 @@
             @endauth
 
             <a href="{{ route('courses.all') }}">{{ __('messages.Courses') }}</a>
+            <a href="{{ route('categorey.game') }}">{{ __('messages.games') }}</a>
 
             <!-- More Dropdown -->
             <div x-data="{ openMore: false }" class="relative">
@@ -28,9 +32,9 @@
                 <div x-show="openMore" x-transition x-cloak
                     class="absolute top-full left-0 mt-2 w-40 bg-white border rounded-lg shadow-lg z-50">
                     <a href="{{ route('about') }}"
-                        class="block px-4 py-2 hover:text-[#79131d]">{{ __('messages.about') }}</a>
+                        class="block px-4 py-2 hover:text-[#176b98]">{{ __('messages.about') }}</a>
                     <a href="{{ route('contact') }}"
-                        class="block px-4 py-2 hover:text-[#79131d]">{{ __('messages.contact') }}</a>
+                        class="block px-4 py-2 hover:text-[#176b98]">{{ __('messages.contact') }}</a>
                 </div>
             </div>
         </nav>
@@ -40,24 +44,25 @@
             {{-- Language Switch --}}
             <div x-data="{ openLang: false }" class="relative">
                 <button @click="openLang = !openLang" @click.away="openLang = false"
-                    class="text-sm font-medium px-2 py-1">
-                    {{ app()->getLocale() === 'ar' ? 'AR' : 'EN' }}
+                    class="text-sm font-medium bg-[#176b98] text-[#FEBE35] px-2 py-1 border border-black rounded">
+                    {{ app()->getLocale() === 'ar' ? 'العربيه' : 'ENGLISH' }}
                 </button>
+
 
                 <div x-show="openLang" x-transition x-cloak
                     class="absolute right-0 mt-1 w-24 bg-white text-black shadow z-50">
                     <a href="{{ route('lang.switch', 'en') }}"
-                        class="block px-3 py-1 text-sm hover:text-[#79131d]">EN</a>
+                        class="block px-3 py-1 text-sm hover:text-[#176b98]">ENGLISH</a>
                     <a href="{{ route('lang.switch', 'ar') }}"
-                        class="block px-3 py-1 text-sm hover:text-[#79131d]">AR</a>
+                        class="block px-3 py-1 text-sm hover:text-[#176b98]">العربيه</a>
                 </div>
             </div>
 
             {{-- Company Profile Link --}}
-            <a href="{{ app()->getLocale() === 'ar' ? asset('pdf/oxfordar.pdf') : asset('pdf/oxforden.pdf') }}"
-                target="_blank" class="px-4 py-2 text-white bg-[#79131d] rounded-md hover:bg-[#5a0e16] transition">
+            {{-- <a href="{{ app()->getLocale() === 'ar' ? asset('pdf/oxfordar.pdf') : asset('pdf/oxforden.pdf') }}"
+                target="_blank" class="px-4 py-2 text-white bg-[#176b98] rounded-md hover:bg-[#5a0e16] transition">
                 {{ __('messages.profile') }}
-            </a>
+            </a> --}}
 
             {{-- User Auth Menu --}}
             @auth
@@ -71,10 +76,10 @@
                     <div x-show="open" x-transition x-cloak
                         class="absolute right-0 mt-2 w-48 bg-white border rounded shadow-lg z-50">
                         <a href="{{ route('profile') }}"
-                            class="block px-4 py-2 text-sm hover:text-[#79131d]">{{ __('messages.Myprofile') }}</a>
+                            class="block px-4 py-2 text-sm hover:text-[#176b98]">{{ __('messages.Myprofile') }}</a>
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
-                            <button type="submit" class="block w-full text-left px-4 py-2 text-sm hover:text-[#79131d]">
+                            <button type="submit" class="block w-full text-left px-4 py-2 text-sm hover:text-[#176b98]">
                                 {{ __('messages.logout') }}
                             </button>
                         </form>
@@ -94,9 +99,9 @@
                     <div x-show="open" x-transition x-cloak
                         class="absolute right-0 mt-2 w-48 bg-white border rounded shadow-lg z-50">
                         <a href="/login"
-                            class="block px-4 py-2 text-sm hover:text-[#79131d]">{{ __('messages.login') }}</a>
+                            class="block px-4 py-2 text-sm hover:text-[#176b98]">{{ __('messages.login') }}</a>
                         <a href="/register"
-                            class="block px-4 py-2 text-sm hover:text-[#79131d]">{{ __('messages.register') }}</a>
+                            class="block px-4 py-2 text-sm hover:text-[#176b98]">{{ __('messages.register') }}</a>
                     </div>
                 </div>
             @endauth

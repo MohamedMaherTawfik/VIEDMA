@@ -26,35 +26,35 @@
          <!-- Navigator Tabs -->
          <div class="flex border-b border-gray-200 pb-4 mb-6">
              <a href="#" @click.prevent="activeTab = 'overview'" class="mr-6 font-medium transition-colors"
-                 :class="activeTab === 'overview' ? 'text-[#79131d] border-b-2 border-[#79131d]' :
-                     'text-gray-600 hover:text-[#79131d]'"
+                 :class="activeTab === 'overview' ? 'text-[#176b98] border-b-2 border-[#176b98]' :
+                     'text-gray-600 hover:text-[#176b98]'"
                  id="overview-tab">
                  Overview
              </a>
 
              <a href="#" @click.prevent="activeTab = 'notes'" class="mr-6 font-medium transition-colors"
-                 :class="activeTab === 'notes' ? 'text-[#79131d] border-b-2 border-[#79131d]' :
-                     'text-gray-600 hover:text-[#79131d]'"
+                 :class="activeTab === 'notes' ? 'text-[#176b98] border-b-2 border-[#176b98]' :
+                     'text-gray-600 hover:text-[#176b98]'"
                  id="notes-tab">
                  Notes
              </a>
 
              <a href="#" @click.prevent="activeTab = 'graduation'" class="mr-6 font-medium transition-colors"
-                 :class="activeTab === 'graduation' ? 'text-[#79131d] border-b-2 border-[#79131d]' :
-                     'text-gray-600 hover:text-[#79131d]'"
+                 :class="activeTab === 'graduation' ? 'text-[#176b98] border-b-2 border-[#176b98]' :
+                     'text-gray-600 hover:text-[#176b98]'"
                  id="graduation-tab">
                  Graduation Project
              </a>
 
              <a href="#" @click.prevent="activeTab = 'quizzes'" class="mr-6 font-medium transition-colors"
-                 :class="activeTab === 'quizzes' ? 'text-[#79131d] border-b-2 border-[#79131d]' :
-                     'text-gray-600 hover:text-[#79131d]'">
+                 :class="activeTab === 'quizzes' ? 'text-[#176b98] border-b-2 border-[#176b98]' :
+                     'text-gray-600 hover:text-[#176b98]'">
                  Quizzes
              </a>
 
              <a href="#" @click.prevent="activeTab = 'Join Meeting'" class="mr-6 font-medium transition-colors"
-                 :class="activeTab === 'Join Meeting' ? 'text-[#79131d] border-b-2 border-[#79131d]' :
-                     'text-gray-600 hover:text-[#79131d]'">
+                 :class="activeTab === 'Join Meeting' ? 'text-[#176b98] border-b-2 border-[#176b98]' :
+                     'text-gray-600 hover:text-[#176b98]'">
                  Join Meeting
              </a>
 
@@ -141,7 +141,7 @@
 
          <!-- Graduation Project Section -->
          <div x-show="activeTab === 'graduation'" id="graduation-section" x-transition>
-             <h3 class="text-2xl font-bold text-[#79131d] mb-4">Graduation Project</h3>
+             <h3 class="text-2xl font-bold text-[#176b98] mb-4">Graduation Project</h3>
 
              <!-- Teacher's GP Details -->
              @foreach ($projects as $item)
@@ -154,7 +154,7 @@
 
                      @if (!empty($item->file) && Storage::disk('public')->exists($item->file))
                          <a href="{{ asset('storage/' . $item->file) }}" target="_blank"
-                             class="flex items-center space-x-2 text-[#79131d] hover:text-[#5a0e16] transition">
+                             class="flex items-center space-x-2 text-[#176b98] hover:text-[#5a0e16] transition">
                              <!-- File Icon SVG -->
                              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor"
                                  viewBox="0 0 20 20">
@@ -162,7 +162,7 @@
                                  <path d="M14 2v6h6" />
                              </svg>
                              <button type="button"
-                                 class="inline-flex items-center px-4 py-2 bg-[#79131d] text-[#e4ce96] rounded hover:bg-[#5a0e16] transition text-sm font-medium">
+                                 class="inline-flex items-center px-4 py-2 bg-[#176b98] text-[#e4ce96] rounded hover:bg-[#5a0e16] transition text-sm font-medium">
                                  Show Project
                              </button>
 
@@ -183,11 +183,11 @@
                      <label for="project_file" class="block text-sm font-medium text-gray-700 mb-1">Submit Your
                          Work</label>
                      <input type="file" id="project_file" name="project_file" accept=".pdf,.docx,.zip" required
-                         class="w-full border-gray-300 rounded-md shadow-sm focus:ring-[#79131d] focus:border-[#79131d]">
+                         class="w-full border-gray-300 rounded-md shadow-sm focus:ring-[#176b98] focus:border-[#176b98]">
                  </div>
 
                  <button type="submit"
-                     class="bg-[#79131d] text-[#e4ce96] hover:bg-[#5a0e16] px-4 py-2 rounded font-semibold text-sm transition-colors duration-300">
+                     class="bg-[#176b98] text-[#e4ce96] hover:bg-[#5a0e16] px-4 py-2 rounded font-semibold text-sm transition-colors duration-300">
                      Submit Project
                  </button>
              </form>
@@ -195,7 +195,7 @@
 
          <!-- Quizzes Section -->
          <div x-show="activeTab === 'quizzes'" id="quizzes-section" x-transition>
-             <h3 class="text-2xl font-bold text-[#79131d] mb-4">Available Quizzes</h3>
+             <h3 class="text-2xl font-bold text-[#176b98] mb-4">Available Quizzes</h3>
 
              @foreach ($quizzes as $quiz)
                  <div class="p-4 bg-white shadow rounded mb-4">
@@ -204,11 +204,11 @@
                          $result = Result::where('quizes_id', $quiz->id)->first();
                      @endphp
                      @if ($result)
-                         <span class="inline-block bg-[#79131d] text-[#e4ce96] px-4 py-2 rounded">
+                         <span class="inline-block bg-[#176b98] text-[#e4ce96] px-4 py-2 rounded">
                              Attempted Quiz
                          </span>
                          <a href="{{ route('student.quiz.result', $quiz->slug) }}"
-                             class="ml-4 inline-flex items-center gap-1 text-[#79131d] hover:text-[#5a0e16] font-medium transition">
+                             class="ml-4 inline-flex items-center gap-1 text-[#176b98] hover:text-[#5a0e16] font-medium transition">
                              View Result
                              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"
                                  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -217,7 +217,7 @@
                          </a>
                      @else
                          <a href="{{ route('student.quiz.show', $quiz->slug) }}"
-                             class="bg-[#79131d] text-[#e4ce96] px-4 py-2 rounded hover:bg-[#5a0e16] transition">
+                             class="bg-[#176b98] text-[#e4ce96] px-4 py-2 rounded hover:bg-[#5a0e16] transition">
                              Start Quiz
                          </a>
                      @endif
@@ -228,7 +228,7 @@
 
          <!-- Join Meeting Section -->
          <div x-show="activeTab === 'Join Meeting'" id="join-meeting-section" x-transition>
-             <h3 class="text-2xl font-bold text-[#79131d] mb-4">Join Live Meeting</h3>
+             <h3 class="text-2xl font-bold text-[#176b98] mb-4">Join Live Meeting</h3>
 
              @php
                  $meeting = $course->courseMeetings()->latest('start_time')->first();
@@ -238,7 +238,7 @@
                  <div class="bg-blue-50 border border-blue-100 p-6 rounded-lg text-center">
                      <p class="text-blue-700 font-medium mb-2">There's a live session available for this course.</p>
                      <a href="{{ $meeting->join_url }}" target="_blank"
-                         class="inline-flex items-center px-5 py-2 bg-[#79131d] text-[#e4ce96] rounded-lg shadow hover:bg-[#5a0e16] transition text-sm font-semibold">
+                         class="inline-flex items-center px-5 py-2 bg-[#176b98] text-[#e4ce96] rounded-lg shadow hover:bg-[#5a0e16] transition text-sm font-semibold">
                          Join Meeting Now
                      </a>
                  </div>
@@ -261,7 +261,7 @@
 
      <!-- Custom Loader -->
      <div id="lesson-loader" class="fixed inset-0 bg-white/80 flex items-center justify-center z-50">
-         <div class="w-16 h-16 border-[6px] border-[#79131d] border-t-transparent rounded-full animate-spin"></div>
+         <div class="w-16 h-16 border-[6px] border-[#176b98] border-t-transparent rounded-full animate-spin"></div>
      </div>
 
      <div class="max-w-5xl mx-auto px-4 mb-16" x-data="{ expandedCard: null }">
@@ -290,7 +290,7 @@
                                  <!-- Play Button on Hover -->
                                  <div class="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300"
                                      :class="{ 'opacity-100': isHovered }">
-                                     <div class="bg-[#79131DDA] bg-opacity-80 rounded-full p-3">
+                                     <div class="bg-[#176b98DA] bg-opacity-80 rounded-full p-3">
                                          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white"
                                              viewBox="0 0 20 20" fill="currentColor">
                                              <path fill-rule="evenodd"
@@ -326,7 +326,7 @@
                                          'opacity-0 translate-y-2': expandedCard !== {{ $lesson->id }} && !isHovered
                                      }">
                                      <a href="{{ route('lesson.show', $lesson->slug) }}"
-                                         class="inline-block bg-[#79131DDA] text-[#e4ce96] px-4 py-2 rounded hover:bg-[#5a0e16] font-medium text-sm transition-colors duration-300 flex items-center">
+                                         class="inline-block bg-[#176b98DA] text-[#e4ce96] px-4 py-2 rounded hover:bg-[#5a0e16] font-medium text-sm transition-colors duration-300 flex items-center">
                                          Go to Lesson
                                          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1"
                                              viewBox="0 0 20 20" fill="currentColor">
@@ -361,8 +361,8 @@
 
                  @for ($i = $start; $i <= $end; $i++)
                      <button data-page="{{ $i }}"
-                         class="w-10 h-10 flex items-center justify-center rounded-md text-sm font-semibold transition-all duration-200 border border-[#79131d]
-                    {{ $i === 1 ? 'bg-[#79131d] text-white' : 'bg-transparent text-gray-700 hover:bg-[#79131d] hover:text-white' }}">
+                         class="w-10 h-10 flex items-center justify-center rounded-md text-sm font-semibold transition-all duration-200 border border-[#176b98]
+                    {{ $i === 1 ? 'bg-[#176b98] text-white' : 'bg-transparent text-gray-700 hover:bg-[#176b98] hover:text-white' }}">
                          {{ $i }}
                      </button>
                  @endfor
@@ -411,10 +411,10 @@
                      const btn = document.createElement('button');
                      btn.dataset.page = i;
                      btn.textContent = i;
-                     btn.className = `w-10 h-10 flex items-center justify-center rounded-md text-sm font-semibold transition-all duration-200 border border-[#79131d] ${
+                     btn.className = `w-10 h-10 flex items-center justify-center rounded-md text-sm font-semibold transition-all duration-200 border border-[#176b98] ${
                     i === currentPage
-                        ? 'bg-[#79131d] text-white'
-                        : 'bg-transparent text-gray-700 hover:bg-[#79131d] hover:text-white'
+                        ? 'bg-[#176b98] text-white'
+                        : 'bg-transparent text-gray-700 hover:bg-[#176b98] hover:text-white'
                 }`;
                      btn.addEventListener('click', () => {
                          currentPage = i;
@@ -509,7 +509,7 @@
                              <!-- Overlay Button -->
                              <div class="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300"
                                  :class="{ 'opacity-100': isHovered }">
-                                 <div class="bg-[#79131DDA] bg-opacity-80 rounded-full p-3">
+                                 <div class="bg-[#176b98DA] bg-opacity-80 rounded-full p-3">
                                      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white"
                                          viewBox="0 0 20 20" fill="currentColor">
                                          <path fill-rule="evenodd"
@@ -536,7 +536,7 @@
                                      'opacity-0 translate-y-2': !isHovered
                                  }">
                                  <a href="{{ route('course.show', $related->slug) }}"
-                                     class="inline-block bg-[#79131d] p-2 mt-2 text-[#e4ce96] hover:bg-[#5a0e16] text-sm font-medium rounded transition duration-300 flex items-center">
+                                     class="inline-block bg-[#176b98] p-2 mt-2 text-[#e4ce96] hover:bg-[#5a0e16] text-sm font-medium rounded transition duration-300 flex items-center">
                                      View Course
                                      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" viewBox="0 0 20 20"
                                          fill="currentColor">

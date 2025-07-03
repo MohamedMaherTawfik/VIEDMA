@@ -9,7 +9,7 @@
             <div></div>
             <div class="flex justify-end">
                 <a href="{{ route('admin.users.create') }}"
-                    class="bg-[#79131DC2] text-right text-white px-4 py-2 rounded-lg shadow hover:bg-[#79131d]">
+                    class="bg-[#176b98C2] text-right text-white px-4 py-2 rounded-lg shadow hover:bg-[#176b98]">
                     Add User +
                 </a>
             </div>
@@ -18,17 +18,17 @@
 
         <!-- User List Headers -->
         <div class="hidden md:grid grid-cols-7 gap-4 font-semibold text-gray-700 mb-2">
-            <div class="text-[#79131d]">User</div>
-            <div class="text-[#79131d]">Email</div>
-            <div class="text-[#79131d]">role</div>
-            <div class="text-[#79131d]">Join Date</div>
-            <div class="text-right mr-10 text-[#79131d]">Status</div>
+            <div class="text-[#176b98]">User</div>
+            <div class="text-[#176b98]">Email</div>
+            <div class="text-[#176b98]">role</div>
+            <div class="text-[#176b98]">Join Date</div>
+            <div class="text-right mr-10 text-[#176b98]">Status</div>
         </div>
 
 
         <!-- User List Container -->
         @foreach ($applies as $apply)
-            <div class="grid grid-cols-7 gap-4 items-center bg-[#e4ce96] p-4 rounded-lg shadow mb-2">
+            <div class="grid grid-cols-7 gap-4 items-center bg-[#FEBE35] p-4 rounded-lg shadow mb-2">
                 <!-- apply Info -->
                 <div class="flex items-center gap-2">
                     <div class="w-10 h-10 bg-gray-300 rounded-full">

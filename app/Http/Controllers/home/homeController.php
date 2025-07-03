@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Interfaces\CategoryInterface;
 use App\Interfaces\CourseInterface;
 use App\Interfaces\EnrollmentInterface;
+use App\Interfaces\GamesCategoriesInterface;
+use App\Interfaces\GamesInterface;
 use App\Interfaces\GraduationProjectInterface;
 use App\Interfaces\LessonInterface;
 use App\Interfaces\ReviewsInterface;
@@ -13,7 +15,6 @@ use App\Models\Courses;
 use App\Models\Enrollments;
 use App\Models\quizes;
 use App\Models\Result;
-use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
@@ -26,8 +27,18 @@ class homeController extends Controller
     private $lessonRepository;
     private $reviewRepository;
     private $projectRepository;
-    public function __construct(CourseInterface $coursesRepository, CategoryInterface $categoreyInterface, EnrollmentInterface $enrollmentInterface, LessonInterface $lessonInterface, ReviewsInterface $reviewsInterface, GraduationProjectInterface $graduationProject)
-    {
+    private $gameCategoreyRepository;
+    private $gameRepository;
+    public function __construct(
+        CourseInterface $coursesRepository,
+        CategoryInterface $categoreyInterface,
+        EnrollmentInterface $enrollmentInterface,
+        LessonInterface $lessonInterface,
+        ReviewsInterface $reviewsInterface,
+        GraduationProjectInterface $graduationProject,
+        GamesCategoriesInterface $gameCategoreyInterface,
+        GamesInterface $gamesInterface,
+    ) {
 
         $this->coursesRepository = $coursesRepository;
         $this->categoreyrepository = $categoreyInterface;
@@ -35,6 +46,8 @@ class homeController extends Controller
         $this->lessonRepository = $lessonInterface;
         $this->reviewRepository = $reviewsInterface;
         $this->projectRepository = $graduationProject;
+        $this->gameCategoreyRepository = $gameCategoreyInterface;
+        $this->gameRepository = $gamesInterface;
     }
     public function index()
     {
@@ -259,5 +272,11 @@ class homeController extends Controller
         return view('home.quiz.result', compact('quiz', 'result'));
     }
 
+    public function getGames()
+    {
+        $categories = $this->gameCategoreyRepository->getAllCategories();
+        $games = $this->gameRepository->allGames();
+        return view('home.games.index', compact('categories', 'games'));
+    }
 
 }

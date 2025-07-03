@@ -5,7 +5,7 @@
 
     <div class="overflow-x-auto">
         <table class="min-w-full bg-white border border-gray-200 rounded-lg">
-            <thead class="bg-[#79131d] text-white">
+            <thead class="bg-[#176b98] text-white">
                 <tr>
                     <th class="px-6 py-3 text-left text-sm font-semibold">#</th>
                     <th class="px-6 py-3 text-left text-sm font-semibold">Category Name</th>

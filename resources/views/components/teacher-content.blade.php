@@ -19,7 +19,7 @@ $price = $enrollments * $course->price;
                         today.
                     </p>
                 </div>
-                <a class="bg-[#79131DC0] text-white px-4 py-2 rounded-lg shadow hover:bg-[#79131d]" href="">Add New
+                <a class="bg-[#176b98C0] text-white px-4 py-2 rounded-lg shadow hover:bg-[#176b98]" href="">Add New
                     Lesson +</a>
             </div>
         </div>
@@ -64,7 +64,7 @@ $price = $enrollments * $course->price;
                     {{-- button with href and customized color --}}
                     <div class="p-4">
                         <a href=""
-                            class="inline-block px-4 py-2 bg-[#79131DC0] text-white rounded-lg hover:bg-[#79131DFF] transition duration-200">View
+                            class="inline-block px-4 py-2 bg-[#176b98C0] text-white rounded-lg hover:bg-[#176b98FF] transition duration-200">View
                             Lesson</a>
                     </div>
                 </div>

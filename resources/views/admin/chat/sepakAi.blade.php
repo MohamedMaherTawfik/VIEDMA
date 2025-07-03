@@ -9,7 +9,7 @@
             <input type="text" id="message" placeholder="Type your message..."
                 class="flex-1 px-4 py-2 border rounded focus:outline-none focus:ring" autocomplete="off">
             <button type="submit"
-                class="bg-[#79131d] text-[#e4ce96] px-4 py-2 rounded hover:bg-[#5e0f17] transition">Send</button>
+                class="bg-[#176b98] text-[#FEBE35] px-4 py-2 rounded hover:bg-[#5e0f17] transition">Send</button>
         </form>
     </div>
 

@@ -11,7 +11,7 @@
                     <input type="text" name="name" placeholder="Full Name"
                         class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500">
                     @error('name')
-                        <span class="text-red-500 text-sm">{{ $message }}</span>
+                        <span class="text-[#176b98] text-sm">{{ $message }}</span>
                     @enderror
                 </div>
 
@@ -21,7 +21,7 @@
                     <input type="email" name="email" placeholder="you@example.com"
                         class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500">
                     @error('email')
-                        <span class="text-red-500 text-sm">{{ $message }}</span>
+                        <span class="text-[#176b98] text-sm">{{ $message }}</span>
                     @enderror
                 </div>
 
@@ -31,7 +31,7 @@
                     <input type="password" name="password" placeholder="Password"
                         class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500">
                     @error('password')
-                        <span class="text-red-500 text-sm">{{ $message }}</span>
+                        <span class="text-[#176b98] text-sm">{{ $message }}</span>
                     @enderror
                 </div>
 
@@ -46,14 +46,14 @@
                         <option value="teacher">teacher</option>
                     </select>
                     @error('role')
-                        <span class="text-red-500 text-sm">{{ $message }}</span>
+                        <span class="text-[#176b98] text-sm">{{ $message }}</span>
                     @enderror
                 </div>
 
                 <!-- Submit -->
                 <div class="text-center">
                     <button type="submit"
-                        class="w-50 py-2 px-4 rounded-md font-semibold text-white bg-[#73131DCE] hover:bg-[#73131d] transition">
+                        class="w-50 py-2 px-4 rounded-md font-semibold text-white bg-[#176b98] hover:bg-[#73131d] transition">
                         Create User
                     </button>
                 </div>

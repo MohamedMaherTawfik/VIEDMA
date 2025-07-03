@@ -32,20 +32,6 @@
     {{-- navbar --}}
     <x-navbar />
 
-    <!-- Header -->
-    <header class="bg-[#79131d] text-white shadow-lg">
-        <div class="container mx-auto px-6 py-4">
-            <div class="flex justify-between items-center">
-                <a href="/" class="text-2xl font-bold text-[#e4ce96]">Oxford Platform</a>
-                <nav class="hidden md:flex space-x-8">
-                    <a href="/" class="hover:text-[#e4ce96] transition">Home</a>
-                    <a href="/courses" class="hover:text-[#e4ce96] transition">Courses</a>
-                    <a href="/contact" class="text-[#e4ce96] font-semibold">Contact</a>
-                </nav>
-                <button class="md:hidden text-2xl">☰</button>
-            </div>
-        </div>
-    </header>
 
     <!-- Animated Contact Section -->
     <section class="py-16 px-4 sm:px-6 lg:px-8" x-data="contactForm()" x-init="initAnimations()">
@@ -53,7 +39,7 @@
             <!-- Section Header (Animated) -->
             <div class="text-center mb-12" x-show="showHeader" x-transition:enter="transition ease-out duration-700"
                 x-transition:enter-start="opacity-0 translate-y-6" x-transition:enter-end="opacity-100 translate-y-0">
-                <h2 class="text-3xl font-bold text-[#79131d] mb-4">Contact Us</h2>
+                <h2 class="text-3xl font-bold text-[#176b98] mb-4">Contact Us</h2>
                 <p class="text-lg text-gray-600 max-w-2xl mx-auto">
                     Have questions? Get in touch with our team—we're here to help!
                 </p>
@@ -65,7 +51,7 @@
                 x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100">
                 <div class="grid grid-cols-1 md:grid-cols-2">
                     <!-- Left Side (Contact Info) -->
-                    <div class="bg-[#79131d] p-8 text-[#e4ce96]">
+                    <div class="bg-[#176b98] p-8 text-[#FEBE35]">
                         <h3 class="text-xl font-bold mb-6">Contact Information</h3>
 
                         <!-- Contact Items -->
@@ -98,19 +84,19 @@
                             <h4 class="font-semibold mb-3">Follow Us</h4>
                             <div class="flex space-x-4">
                                 <a href="#"
-                                    class="w-10 h-10 rounded-full bg-[#e4ce96] text-[#79131d] flex items-center justify-center hover:bg-white transition">
+                                    class="w-10 h-10 rounded-full bg-[#FEBE35] text-[#176b98] flex items-center justify-center hover:bg-white transition">
                                     <i class="fab fa-facebook-f"></i>
                                 </a>
                                 <a href="#"
-                                    class="w-10 h-10 rounded-full bg-[#e4ce96] text-[#79131d] flex items-center justify-center hover:bg-white transition">
+                                    class="w-10 h-10 rounded-full bg-[#FEBE35] text-[#176b98] flex items-center justify-center hover:bg-white transition">
                                     <i class="fab fa-twitter"></i>
                                 </a>
                                 <a href="#"
-                                    class="w-10 h-10 rounded-full bg-[#e4ce96] text-[#79131d] flex items-center justify-center hover:bg-white transition">
+                                    class="w-10 h-10 rounded-full bg-[#FEBE35] text-[#176b98] flex items-center justify-center hover:bg-white transition">
                                     <i class="fab fa-linkedin-in"></i>
                                 </a>
                                 <a href="#"
-                                    class="w-10 h-10 rounded-full bg-[#e4ce96] text-[#79131d] flex items-center justify-center hover:bg-white transition">
+                                    class="w-10 h-10 rounded-full bg-[#FEBE35] text-[#176b98] flex items-center justify-center hover:bg-white transition">
                                     <i class="fab fa-instagram"></i>
                                 </a>
                             </div>
@@ -127,7 +113,7 @@
                                 <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Full
                                     Name</label>
                                 <input type="text" id="name" x-model="form.name"
-                                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#79131d] focus:border-transparent"
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#176b98] focus:border-transparent"
                                     placeholder="John Doe" required>
                             </div>
 
@@ -135,7 +121,7 @@
                             <div>
                                 <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
                                 <input type="email" id="email" x-model="form.email"
-                                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#79131d] focus:border-transparent"
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#176b98] focus:border-transparent"
                                     placeholder="john@example.com" required>
                             </div>
 
@@ -144,7 +130,7 @@
                                 <label for="subject"
                                     class="block text-sm font-medium text-gray-700 mb-1">Subject</label>
                                 <input type="text" id="subject" x-model="form.subject"
-                                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#79131d] focus:border-transparent"
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#176b98] focus:border-transparent"
                                     placeholder="Course Inquiry" required>
                             </div>
 
@@ -153,13 +139,13 @@
                                 <label for="message"
                                     class="block text-sm font-medium text-gray-700 mb-1">Message</label>
                                 <textarea id="message" x-model="form.message" rows="4"
-                                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#79131d] focus:border-transparent"
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#176b98] focus:border-transparent"
                                     placeholder="Your message here..." required></textarea>
                             </div>
 
                             <!-- Submit Button -->
                             <button type="submit"
-                                class="w-full bg-[#79131d] text-[#e4ce96] py-3 rounded-md font-medium hover:bg-[#79131d]/90 transition flex items-center justify-center"
+                                class="w-full bg-[#176b98] text-[#FEBE35] py-3 rounded-md font-medium hover:bg-[#176b98]/90 transition flex items-center justify-center"
                                 :disabled="isSubmitting">
                                 <span x-text="isSubmitting ? 'Sending...' : 'Send Message'"></span>
                                 <svg x-show="isSubmitting" class="animate-spin -mr-1 ml-3 h-5 w-5 text-white"
