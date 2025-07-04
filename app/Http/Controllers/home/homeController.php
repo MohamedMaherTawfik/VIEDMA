@@ -284,4 +284,14 @@ class homeController extends Controller
         return view('home.games.index', compact('categories', 'games'));
     }
 
+    public function showGame()
+    {
+        $game = $this->gameRepository->getGameBySlug(request('slug'));
+        return view('home.games.show', compact('game'));
+    }
+
+    public function showGameCategorey()
+    {
+
+    }
 }

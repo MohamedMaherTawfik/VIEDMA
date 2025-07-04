@@ -55,6 +55,7 @@ Route::group([], function () {
     Route::get('/student/quizzes/{quiz}/result', [homeController::class, 'quizResult'])->name('student.quiz.result')->middleware('auth');
     Route::get('/games', [homeController::class, 'getGames'])->name('categorey.game');
     Route::get('/game/{slug}', [homeController::class, 'showGame'])->name('game.show');
+    Route::get('/gameCategorey/{slug}', [homeController::class, 'showGameCategorey'])->name('game.categorey.show');
 });
 
 Route::group([
